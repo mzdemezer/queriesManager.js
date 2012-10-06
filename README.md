@@ -12,13 +12,13 @@ It is planned to become independent of above.
 
 Hope you like it.
 
+<pre>
 //	Usage:
-/*
-Options:
--	Necessary: 
+/*	Options:
+Necessary: 
 -		user
 -		password
--	Optional
+Optional
 -		database - better use it or you will have to use USE sth; as first query of each connection
 -		queriesModule - module returning function that would return queries given (type, arguments); I strongly suggest to make use of it
 -		host - default to localhost
@@ -68,7 +68,7 @@ Options:
 		
 		callback ::= function(err, resp){ ... }
 */
-
+</pre>
 
 Distributed under MIT licence; see LICENCE for more
  
