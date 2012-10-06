@@ -1,0 +1,13 @@
+{
+	"name": "queriesManager"
+,	"main": "./index.js"
+,	"version": "0.5"
+,	"author": {
+		"name": "Michał Zajączkowski"
+	,	"email": "jedi1156@gmail.com"
+	}
+,	"dependencies": {
+		"mysql": "2.0.0-alpha3"
+	,	"generic-pool": "2.0.0"
+	}
+}
