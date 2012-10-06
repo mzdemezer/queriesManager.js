@@ -15,25 +15,24 @@ Hope you like it.
 //	Usage:
 /*
 Options:
-	Necessary: 
-		user
-		password
-	Optional
-		database - better use it or you will have to use USE sth; as first query of each connection
-		queriesModule - module returning function that would return queries given (type, arguments); I strongly suggest to make use of it
-		host - default to localhost
-		port - default to 3306
-		poolSize - default to 10
-		cluster - default to false; if true then poolSize will be devided by numCPUs with minimal minSize || 10 value
-		numCPUs - default to require('os').cpus().length, but only if cluster is truthy
-		minSize - default to ten
-		initQueries - false/true, default true; if false, no initQueries will be executed on start
-		log
-		includeFields - if true every result will be array of[{ rows1, fields1 }, { rows2, fields2 }, ...] objects; otherwise it will be only [ rows1, rows2, rows3, ...]
+-	Necessary: 
+-		user
+-		password
+-	Optional
+-		database - better use it or you will have to use USE sth; as first query of each connection
+-		queriesModule - module returning function that would return queries given (type, arguments); I strongly suggest to make use of it
+-		host - default to localhost
+-		port - default to 3306
+-		poolSize - default to 10
+-		cluster - default to false; if true then poolSize will be devided by numCPUs with minimal minSize || 10 value
+-		numCPUs - default to require('os').cpus().length, but only if cluster is truthy
+-		minSize - default to ten
+-		initQueries - false/true, default true; if false, no initQueries will be executed on start
+-		log
+-		includeFields - if true every result will be array of[{ rows1, fields1 }, { rows2, fields2 }, ...] objects; otherwise it will be only [ rows1, rows2, rows3, ...]
 */
 	var	qrMan = require("queriesManager")(options)
 		,	database;
-
 	qrMan(function(err, db){
 		if(err){
 			console.log("You are guilty of:\n" + err);
