@@ -1,7 +1,7 @@
 {
 	"name": "queriesManager"
 ,	"main": "./index.js"
-,	"version": "0.5"
+,	"version": "0.5.0"
 ,	"author": {
 		"name": "Michał Zajączkowski"
 	,	"email": "jedi1156@gmail.com"
