@@ -5,16 +5,19 @@
 	}
 	
 	var opts = {
-				host: options.host || "localhost"
-			,	port: options.port || "3306"
-			,	user: options.user
-			,	log: options.log
-			,	password: options.password
-			,	database: options.database
-			,	queries: null
-			,	poolSize: options.poolSize || 10
-			,	includeFields: options.includeFields
-			};
+		host: "localhost"
+	,	port: "3306"
+	,	user: null
+	,	log: false
+	,	password: null
+	,	database: null
+	,	queries: null
+	,	poolSize: 10
+	,	includeFields: null
+	}
+	Object.keys(options).forEach(function(item, idx, arr){
+		opts[item] = options[item] || opts[item];
+	});
 	
 	if(options.initQueries != null){
 		opts.initQueries = options.initQueries;
@@ -50,6 +53,7 @@
 					callback(null, client);
 				}
 			,	destroy: function(client){
+// 					console.log("FINISHED");
 					client.end();
 				}
 			});
